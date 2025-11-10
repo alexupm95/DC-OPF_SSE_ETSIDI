@@ -64,20 +64,20 @@ function Economic_Dispatch(case, current_path_folder)
     println()
     println("##########################################")
     println()
-    println("SOLUTION:")
+    println("SOLUCIÓN:")
     println()
 
-    println("Total cost: ", value(Total_cost), " €")
+    println("CUSTO TOTAL: ", value(Total_cost), " €")
     println()
 
-    println("Power output:")
+    println("POTENCIA GENERADA:")
     for i in 1:nGEN
-        println("  - Generator $i: ", value(P[i]), " MW")
+        println("  - Generador $i: ", value(P[i]), " MW")
     end
     println()
 
     λₑₙₑᵣ = dual(power_balance) # Marginal price of energy, €/MWh
-    println("Price of energy: ", λₑₙₑᵣ, " €/MWh")   
+    println("PRECIO DE LA ENERGIA: ", λₑₙₑᵣ, " €/MWh")   
 
     #                               ENDS OPTIMIZATION PROCESS 
     # ########################################################################################
