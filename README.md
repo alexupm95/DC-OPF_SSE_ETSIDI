@@ -1,11 +1,11 @@
-# DC-OPF and ECONOMIC DISPATCH in Julia Language
-This code solves the DC-OPF and Economic Dispatch using Julia-JuMP and HiGHS solver.
+# ECONOMIC DISPATCH, UNIT COMMITMENT, and DC-OPF in Julia-JuMP
+This code uses the Julia-JuMP and HiGHS solver to solve simple versions of the Economic Dispatch, Unit Commitment and DC-OPF problems.
 
-## 🚀 Running the Code Online (direct without installing packages)
+## 👨🏽‍💻 Running the Code Online (direct on the web)
 
 **1. 💻 Open the website https://mybinder.org/:**
 
-**2. Build and Launch the Repository:**  
+**2. 🚀 Build and Launch the Repository:**  
 <details>
   <summary>Click to see the details</summary>
 
@@ -21,11 +21,11 @@ This code solves the DC-OPF and Economic Dispatch using Julia-JuMP and HiGHS sol
       <img src="./utils/Step2.png" alt="Step 2" width="50%">
      </p>
 
-> ℹ️ Note: **After you click `launch` on MyBinder, it builds a temporary cloud environment from the selected GitHub repository — installing dependencies and opening an interactive workspace (like Jupyter or VS Code) where you can run the code directly in your browser.**
+> ℹ️ Note: **After you click `launch` on MyBinder, it builds a temporary cloud environment from the selected GitHub repository — installing dependencies and opening an interactive workspace (like Jupyter or VS Code) where you can run the code directly in your browser. In MyBinder, you can edit any file and save it locally. However, any changes you make are not pushed to the GitHub repository (fortunately).**
 
 </details>
 
-**3. Run the Code:**  
+**3. 👨🏽‍💻 Run the Code:**  
 <details>
   <summary>Click to see the details</summary>
 
@@ -37,14 +37,15 @@ This code solves the DC-OPF and Economic Dispatch using Julia-JuMP and HiGHS sol
       <p align="center">
         <img src="./utils/Step5.png" alt="Step 5" width="50%">
       </p>
-  3. In the terminal window, type `julia` and then enter
+  3. In the terminal window, type `julia` and then press **Enter**
       <p align="center">
         <img src="./utils/Step6.png" alt="Step 6" width="50%">
       </p>
-  4. To run the code, in the Julia Terminal type `include("main.jl")`
+  4. To run the code, in the Julia Terminal type `include("main.jl")` and then press **Enter**
       <p align="center">
         <img src="./utils/Step7.png" alt="Step 7" width="50%">
       </p>
+> ℹ️ **Note**: Each time you want to run the simulation, type `include("main.jl")` in the terminal and press **Enter**. Alternatively, you can press the **⬆️ (up arrow)** key to recall the previous command from your history and then press **Enter** again.
 </details>
 
 ---
@@ -56,7 +57,7 @@ This code solves the DC-OPF and Economic Dispatch using Julia-JuMP and HiGHS sol
   1. The root directory is composed of the following folders and files:  
 
       <p align="center">
-        <img src="./utils/Step4.png" alt="Step 4" width="50% height = 30%">
+        <img src="./utils/Step4.png" alt="Step 4" width="50% height=30%">
       </p>
 
       - 📁 [`Functions/`](./Functions): Contains all auxiliary functions used in the simulation  
@@ -68,21 +69,23 @@ This code solves the DC-OPF and Economic Dispatch using Julia-JuMP and HiGHS sol
 
   2. Getting inside the folder [`Functions/`](./Functions):
      <details> <summary>See details</summary>
-      - Inside this folder, there are nine files, which are the julia functions used during the simulation (DONT'T NEED TO BE MODIFIED)
+      - Inside this folder, there are nine files, which are the julia functions used during the simulation (<b>DON'T NEED TO BE MODIFIED</b>)
         <p align="center">
           <img src="./utils/Step14.png" alt="Step 14" width="50%">
         </p>
      </details>
-        
+
   3. Getting inside the folder [`Input_Data/`](./Input_Data):
      <details> <summary>See details</summary>
-      - Inside this folder, there are two subfolders, which are the data for the test cases available (`2nodos` & `3nodos`)
+       
+      - Inside this folder, there are two subfolders, which are the data for the test cases available ([`2nodos`](./Input_Data/2nodos) & [`3nodos`](./Input_Data/3nodos))
         <p align="center">
           <img src="./utils/Step9.png" alt="Step 9" width="50%">
         </p>
+       
      </details>
         
-  4. Getting inside the folder [`Results/`](./Results):
+  4. 📊 Getting inside the folder [`Results/`](./Results):
      <details> <summary>See details</summary>
       - Inside this folder, there are seven txt files in which the results are stored for analysis
         <p align="center">
@@ -122,7 +125,7 @@ This code solves the DC-OPF and Economic Dispatch using Julia-JuMP and HiGHS sol
 
 ---
 
-**5. 💻 Modifying the input data:**
+**5. 👨🏽‍💻 Modifying the input data:**
 <details>
   <summary>Click to see the details</summary>
   
@@ -202,4 +205,41 @@ This code solves the DC-OPF and Economic Dispatch using Julia-JuMP and HiGHS sol
             end
           ```
       
+</details>
+
+---
+**6. 🛠️ Modifying the type of simulation:**
+<details>
+  <summary>Click to see the details</summary>
+
+  1. Open the file 📄 [`main.jl`](main.jl)  
+      <p align="center">
+        <img src="./utils/Step8.png" alt="Step 8" width="50%" height="30%">
+      </p>
+
+  2. To select the system you want to simulate, modify the variable `sistema`.  
+     Currently, there are two options available: `2nodos` and `3nodos`.
+
+  3. To choose the type of simulation, set the variable `simulacion` to one of the following options:
+     - `DE` → runs an **Economic Dispatch**
+     - `UC` → runs a **Unit Commitment**
+     - `DCOPF` → runs a **Linearized Optimal Power Flow**
+
+</details>
+
+---
+**7. 📜 Open the README file inside MyBinder:**  
+<details>
+  <summary>Click to see the details</summary>
+  
+  1. To view the README file in the environment created using MyBinder, right-click on the [`README.md`](README.md) file, then click on `Open With`, then click on `Markdown Preview`.
+     
+      <figure style="display:inline-block; margin:10px; text-align:center;">
+       <img src="./utils/Step23.png" alt="Step 23" style="width:300px; height:350px; object-fit:contain; display:block;">
+       <figcaption style="text-align:center; margin-top:8px; display:block;"><em>(a) Open With</em></figcaption>
+     </figure>
+     <figure style="display:inline-block; margin:10px; text-align:center;">
+       <img src="./utils/Step24.png" alt="Step 24" style="width:400px; height:350px; object-fit:contain; display:block;">
+       <figcaption style="text-align:center; margin-top:8px; display:block;"><em>(b) Markdown Preview</em></figcaption>
+     </figure>
 </details>
