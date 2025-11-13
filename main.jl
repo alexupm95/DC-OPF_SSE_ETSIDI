@@ -37,6 +37,7 @@ include("./Functions/AF_BUILD_DCOPF_MODEL.jl") # Función auxiliar para crear el
 include("./Functions/AF_SAVE_OUTPUT.jl")       # Función auxiliar para guardar los resultados de salida 
 include("./Functions/AF_RUN_DCOPF.jl")         # Función auxiliar para ejecutar el DC-OPF
 include("./Functions/AF_ECONOMIC_DISPATCH.jl") # Función auxiliar para ejecutar el Despacho Economico
+include("./Functions/AF_UNIT_COMMITMENT.jl")   # Función auxiliar para ejecutar el Unit Commitment
 
 #=
 ** Elige el sistema que quieres simular: **
@@ -46,16 +47,21 @@ include("./Functions/AF_ECONOMIC_DISPATCH.jl") # Función auxiliar para ejecutar
 sistema  = "2nodos"
 
 #=
-** Elige se quires simular Despacho Economico (DE) o Flujo de Potencia Lineal (DCOPF): **
+** Elige se quires simular Despacho Economico (DE), Unit Commitment (UC), o Flujo de Potencia Lineal (DCOPF): **
 DE
-DCOPF
+UC
+DCOPFW
 =#
-simulacion = "DE"
+simulacion = "DCOPF"
 
 if simulacion == "DE"
     Economic_Dispatch(sistema, carpeta_actual)
+
+elseif simulacion == "UC"
+    Run_UC(sistema, carpeta_actual)
 
 elseif simulacion == "DCOPF"
     Run_DCOPF(sistema, carpeta_actual)
 
 end
+
