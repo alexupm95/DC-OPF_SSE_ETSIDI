@@ -13,8 +13,8 @@ Este código utiliza Julia-JuMP y el solver HiGHS para resolver versiones simple
     <img src="./utils/Step1.png" alt="Paso 1" width="50%">
   </p>
 
-  1. Copia y pega la URL del repositorio (`https://github.com/alexupm95/DC-OPF_SSE_ETSIDI`) en el campo **Nombre o URL del repositorio de GitHub**.  
-  2. En el campo **Git ref (rama, etiqueta o commit)**, escribe `main`.  
+  1. Copia y pega la URL del repositorio (`https://github.com/alexupm95/DC-OPF_SSE_ETSIDI`) en el campo **GitHub repository name or URL**.  
+  2. En el campo **Git ref (branch, tag, or commit)**, escribe `main`.  
   3. Luego haz clic en **launch**.  
   4. Espera a que el servidor instale todos los requisitos y precompile los paquetes.
      <p align="center">
@@ -132,7 +132,7 @@ Este código utiliza Julia-JuMP y el solver HiGHS para resolver versiones simple
   1. Para modificar los datos de entrada, ve a la carpeta 📁 [`Input_Data/`](./Input_Data), y abre la subcarpeta asociada al sistema que quieras modificar (`2nodos` & `3nodos`):
        <p align="center">
         <figure style="display:inline-block; margin:10px; text-align:center;">
-          <img src="./utils/_2bus.png" alt="2bus" style="width:300px; height:200px; object-fit:contain; display:block;">
+          <img src="./utils/_2bus.png" alt="2bus" style="width:240px; height:150px; object-fit:contain; display:block;">
           <figcaption style="text-align:center; margin-top:8px; display:block;"><em>(a) Diagrama sistema 2 nodos.</em></figcaption>
         </figure>
         <figure style="display:inline-block; margin:10px; text-align:center;">
@@ -236,10 +236,10 @@ Este código utiliza Julia-JuMP y el solver HiGHS para resolver versiones simple
      
       <figure style="display:inline-block; margin:10px; text-align:center;">
        <img src="./utils/Step23.png" alt="Paso 23" style="width:300px; height:350px; object-fit:contain; display:block;">
-       <figcaption style="text-align:center; margin-top:8px; display:block;"><em>(a) Abrir con</em></figcaption>
+       <figcaption style="text-align:center; margin-top:8px; display:block;"><em>(a) Open With</em></figcaption>
      </figure>
      <figure style="display:inline-block; margin:10px; text-align:center;">
        <img src="./utils/Step24.png" alt="Paso 24" style="width:400px; height:350px; object-fit:contain; display:block;">
-       <figcaption style="text-align:center; margin-top:8px; display:block;"><em>(b) Vista previa de Markdown</em></figcaption>
+       <figcaption style="text-align:center; margin-top:8px; display:block;"><em>(b) Markdown Preview</em></figcaption>
      </figure>
 </details>
