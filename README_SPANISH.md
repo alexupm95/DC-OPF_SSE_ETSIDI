@@ -1,11 +1,11 @@
-# DESPACHO ECONÓMICO, COMPROMISO DE GENERACIÓN y DC-OPF en Julia-JuMP
-Este código utiliza Julia-JuMP y el solver HiGHS para resolver versiones simples de los problemas de Despacho Económico, Compromiso de Generación y DC-OPF.
+# Optimización de sistemas eléctricos de potencia en Julia-JuMP
+Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para resolver versiones simples de los problemas de Despacho Económico, Encendido de Generación ("Unit Commitment") y flujo de cargas óptimo linealizado ("DC Optimal Power Flow").
 
-## 👨🏽‍💻 Ejecutar el Código Online (directamente en la web)
+## 👨🏽‍💻 Ejecutar el código online (directamente en la web)
 
 **1. 💻 Abrir el sitio web https://mybinder.org/:**
 
-**2. 🚀 Construir y Lanzar el Repositorio:**  
+**2. 🚀 Construir y lanzar el repositorio:**  
 <details>
   <summary>Haz clic para ver los detalles</summary>
 
@@ -25,7 +25,7 @@ Este código utiliza Julia-JuMP y el solver HiGHS para resolver versiones simple
 
 </details>
 
-**3. 👨🏽‍💻 Ejecutar el Código:**  
+**3. 👨🏽‍💻 Ejecutar el código:**  
 <details>
   <summary>Haz clic para ver los detalles</summary>
 
