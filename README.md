@@ -145,7 +145,7 @@ This code uses the programming language Julia-JuMP and the HiGHS solver to solve
       
   3. **Example for the `3nodos` system:** 
      
-      - Go to the subfolder 📁 [`Input_Data/3nodos`](./Input_Data/3nodos) and double click on the file [`Input_Data/3nodos/datos_sistema.jl`](./Input_Data/3nodsos/datos_sistema.jl)
+      - Go to the subfolder 📁 [`Input_Data/3nodos`](./Input_Data/3nodos) and double click on the file [`Input_Data/3nodos/datos_sistema.jl`](./Input_Data/3nodos/datos_sistema.jl)
         
       - The variables that you can play with are:
         > ℹ️ Note: **All the input variables are saved in vectors. To separate two elements inside the vector, use semicolon (`;`).**
