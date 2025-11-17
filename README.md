@@ -65,7 +65,7 @@ This code uses the programming language Julia-JuMP and the HiGHS solver to solve
       - 📁 [`Results/`](./Results): Contains all the output results
       - 📁 [`utils/`](./utils): Contains some figures used in this guide  
       - 📄 [`main.jl`](./main.jl): The main script to run simulations and obtain results  
-      - 📄 [`Manifest.toml`](./Manifest.toml), [`Project.toml`](../Project.toml), and [`README.md`](../README.md): Auxiliary configuration and documentation files  
+      - 📄 [`Manifest.toml`](./Manifest.toml), [`Project.toml`](./Project.toml), and [`README.md`](./README.md): Auxiliary configuration and documentation files  
 
   2. Getting inside the folder [`Functions/`](./Functions):
      <details> <summary>See details</summary>
