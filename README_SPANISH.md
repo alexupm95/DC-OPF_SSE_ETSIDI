@@ -65,7 +65,7 @@ Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para 
       - 📁 [`Results/`](./Results): Contiene todos los resultados de salida
       - 📁 [`utils/`](./utils): Contiene algunas figuras utilizadas en esta guía  
       - 📄 [`main.jl`](./main.jl): El script principal para ejecutar simulaciones y obtener resultados  
-      - 📄 [`Manifest.toml`](./Manifest.toml), [`Project.toml`](../Project.toml), y [`README.md`](../README.md): Archivos de configuración y documentación auxiliares  
+      - 📄 [`Manifest.toml`](./Manifest.toml), [`Project.toml`](../Project.toml), [`README.md`](./README.md) y [`README_SPANISH.md`](./README_SPANISH.md): Archivos de configuración y documentación auxiliares  
 
   2. Acceder a la carpeta [`Functions/`](./Functions):
      <details> <summary>Ver detalles</summary>
@@ -78,7 +78,7 @@ Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para 
   3. Acceder a la carpeta [`Input_Data/`](./Input_Data):
      <details> <summary>Ver detalles</summary>
        
-      - Dentro de esta carpeta, hay dos subcarpetas, que contienen los datos para los casos de prueba disponibles ([`2nodos`](./Input_Data/2nodos) & [`3nodos`](./Input_Data/3nodos))
+      - Dentro de esta carpeta, hay tres subcarpetas, que contienen los datos para los casos de prueba disponibles ([`1nodo`](./Input_Data/1nodo), [`2nodos`](./Input_Data/2nodos) & [`3nodos`](./Input_Data/3nodos))
         <p align="center">
           <img src="./utils/Step9.png" alt="Paso 9" width="50%">
         </p>
@@ -129,7 +129,7 @@ Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para 
 <details>
   <summary>Haz clic para ver los detalles</summary>
   
-  1. Para modificar los datos de entrada, ve a la carpeta 📁 [`Input_Data/`](./Input_Data), y abre la subcarpeta asociada al sistema que quieras modificar (`2nodos` & `3nodos`):
+  1. Para modificar los datos de entrada, ve a la carpeta 📁 [`Input_Data/`](./Input_Data), y abre la subcarpeta asociada al sistema que quieras modificar (`1nodo`, `2nodos` & `3nodos`):
        <p align="center">
         <figure style="display:inline-block; margin:10px; text-align:center;">
           <img src="./utils/_2bus.png" alt="2bus" style="width:240px; height:150px; object-fit:contain; display:block;">
@@ -220,13 +220,13 @@ Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para 
       </p>
 
   2. Para seleccionar el sistema que quieres simular, modifica la variable `sistema`.  
-     Actualmente, hay dos opciones disponibles: `2nodos` y `3nodos`.
+     Actualmente, hay tres opciones disponibles: `1nodo`, `2nodos` y `3nodos`.
 
   3. Para elegir el tipo de simulación, establece la variable `simulacion` a una de las siguientes opciones:
-     - `DE` → ejecuta un **Despacho Económico**
+     - `ED` → ejecuta un **Despacho Económico**
      - `UC` → ejecuta un **Encendido de Generación**
      - `DCOPF` → ejecuta un **Flujo de Carga Óptimo Linealizado**
-
+> ℹ️ **Note**: El sistema <code>1nodo</code> solo se puede simular con Despacho Económico y Encendido de Generación. Para ejecutar el DCOPF, el sistema debe tener al menos dos nodos.
 </details>
 
 ---
