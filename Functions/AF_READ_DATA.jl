@@ -15,10 +15,10 @@ function Read_Input_Data(folder_path::String)
         return df_bus
     end
 
-    function read_gen_data(generador, minima_potencia, maxima_potencia, coste)
+    function read_gen_data(generador, nodo_gen, minima_potencia, maxima_potencia, coste)
         df_gen = DataFrame(
             id = Int64.(generador),
-            bus = Int64.(generador),  # same as ID
+            bus = Int64.(nodo_gen),
             pg_min = Float64.(minima_potencia),
             pg_max = Float64.(maxima_potencia),
             g_cost = Float64.(coste),
@@ -46,12 +46,12 @@ function Read_Input_Data(folder_path::String)
 
     # Call the functions inside the included module safely
     nodo, potencia_carga = Base.invokelatest(() -> getfield(mod, :nodos)())
-    generador, minima_potencia, maxima_potencia, coste = Base.invokelatest(() -> getfield(mod, :generadores)())
+    generador, nodo_gen, minima_potencia, maxima_potencia, coste = Base.invokelatest(() -> getfield(mod, :generadores)())
     linea, de_nodo, para_nodo, susceptancia, maxima_potencia_linea = Base.invokelatest(() -> getfield(mod, :lineas)())
 
     # Convert to DataFrames
     DBUS = read_bus_data(nodo, potencia_carga)
-    DGEN = read_gen_data(generador, minima_potencia, maxima_potencia, coste)
+    DGEN = read_gen_data(generador, nodo_gen, minima_potencia, maxima_potencia, coste)
     DCIR = read_circuit_data(linea, de_nodo, para_nodo, susceptancia, maxima_potencia_linea)
 
     # ==============================================================================================
@@ -104,4 +104,3 @@ function Reverse_Buses_Labels(DBUS::DataFrame, DGEN::DataFrame, DCIR::DataFrame,
 
     return DBUS, DGEN, DCIR
 end
-

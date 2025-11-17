@@ -1,4 +1,4 @@
-function Economic_Dispatch(case, current_path_folder)
+function Run_Economic_Dispatch(case, current_path_folder)
     base_MVA    = 100.0         # Base Power [MVA]
 
     #-----------------------------------------

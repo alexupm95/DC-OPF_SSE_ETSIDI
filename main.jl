@@ -41,28 +41,34 @@ include("./Functions/AF_UNIT_COMMITMENT.jl")   # Función auxiliar para ejecutar
 
 #=
 ** Elige el sistema que quieres simular: **
+1nodo
 2nodos
 3nodos
 =#
-sistema  = "2nodos"
+sistema  = "1nodo"
 
 #=
-** Elige se quires simular Despacho Economico (DE), Encendido de Generación (UC), o Flujo de Potencia Lineal (DCOPF): **
-DE
+** Elige se quires simular Despacho Economico (ED), Encendido de Generación (UC), o Flujo de Potencia Lineal (DCOPF): **
+ED
 UC
-DCOPFW
+DCOPF
 =#
-simulacion = "DCOPF"
+simulacion = "ED"
 
-if simulacion == "DE"
-    Economic_Dispatch(sistema, carpeta_actual)
+if simulacion == "ED"
+    Run_Economic_Dispatch(sistema, carpeta_actual)
 
 elseif simulacion == "UC"
-    Run_UC(sistema, carpeta_actual)
+    Run_Unit_Commitment(sistema, carpeta_actual)
 
 elseif simulacion == "DCOPF"
-    Run_DCOPF(sistema, carpeta_actual)
+    if sistema != "1nodo"
+        Run_DCOPF(sistema, carpeta_actual)
+    else
+        Clean_Terminal()
+        println("AVISO: Para simular el flujo de potencia lineal, el sistema debe tener dos nodos o más.")
+    end
+    
 
 end
-
 

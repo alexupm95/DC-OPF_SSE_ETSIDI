@@ -1,4 +1,4 @@
-function Run_UC(case, current_path_folder)
+function Run_Unit_Commitment(case, current_path_folder)
     base_MVA    = 100.0         # Base Power [MVA]
 
     #-----------------------------------------
