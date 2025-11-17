@@ -65,7 +65,7 @@ This code uses the programming language Julia-JuMP and the HiGHS solver to solve
       - 📁 [`Results/`](./Results): Contains all the output results
       - 📁 [`utils/`](./utils): Contains some figures used in this guide  
       - 📄 [`main.jl`](./main.jl): The main script to run simulations and obtain results  
-      - 📄 [`Manifest.toml`](./Manifest.toml), [`Project.toml`](./Project.toml), and [`README.md`](./README.md): Auxiliary configuration and documentation files  
+      - 📄 [`Manifest.toml`](./Manifest.toml), [`Project.toml`](./Project.toml), [`README.md`](./README.md) and [`README_SPANISH.md`](./README_SPANISH.md): Auxiliary configuration and documentation files  
 
   2. Getting inside the folder [`Functions/`](./Functions):
      <details> <summary>See details</summary>
@@ -78,7 +78,7 @@ This code uses the programming language Julia-JuMP and the HiGHS solver to solve
   3. Getting inside the folder [`Input_Data/`](./Input_Data):
      <details> <summary>See details</summary>
        
-      - Inside this folder, there are two subfolders, which are the data for the test cases available ([`2nodos`](./Input_Data/2nodos) & [`3nodos`](./Input_Data/3nodos))
+      - Inside this folder, there are three subfolders, which are the data for the test cases available ([`2nodos`](./Input_Data/2nodos) & [`3nodos`](./Input_Data/3nodos))
         <p align="center">
           <img src="./utils/Step9.png" alt="Step 9" width="50%">
         </p>
@@ -129,7 +129,7 @@ This code uses the programming language Julia-JuMP and the HiGHS solver to solve
 <details>
   <summary>Click to see the details</summary>
   
-  1. To modify the input data, go to the folder 📁 [`Input_Data/`](./Input_Data), and open the subfolder associated to the system you want to modify (`2nodos` & `3nodos`):
+  1. To modify the input data, go to the folder 📁 [`Input_Data/`](./Input_Data), and open the subfolder associated to the system you want to modify (`1nodo`, `2nodos` & `3nodos`):
        <p align="center">
         <figure style="display:inline-block; margin:10px;">
           <img src="./utils/_2bus.png" alt="2bus" width="25%">
@@ -220,13 +220,13 @@ This code uses the programming language Julia-JuMP and the HiGHS solver to solve
       </p>
 
   2. To select the system you want to simulate, modify the variable `sistema`.  
-     Currently, there are two options available: `2nodos` and `3nodos`.
+     Currently, there are three options available: `1nodo`, `2nodos` and `3nodos`.
 
   3. To choose the type of simulation, set the variable `simulacion` to one of the following options:
-     - `DE` → runs an **Economic Dispatch**
+     - `ED` → runs an **Economic Dispatch**
      - `UC` → runs a **Unit Commitment**
      - `DCOPF` → runs a **Linearized Optimal Power Flow**
-
+> ℹ️ **Note**: The <code>1nodo</code> system can only be simulated with Economic Dispatch and Unit Commitment. In order to run the DCOPF, the system must have at least two nodes.
 </details>
 
 ---
