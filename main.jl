@@ -37,7 +37,7 @@ include("./Functions/AF_BUILD_DCOPF_MODEL.jl") # Función auxiliar para crear el
 include("./Functions/AF_SAVE_OUTPUT.jl")       # Función auxiliar para guardar los resultados de salida 
 include("./Functions/AF_RUN_DCOPF.jl")         # Función auxiliar para ejecutar el DC-OPF
 include("./Functions/AF_ECONOMIC_DISPATCH.jl") # Función auxiliar para ejecutar el Despacho Economico
-include("./Functions/AF_UNIT_COMMITMENT.jl")   # Función auxiliar para ejecutar el Unit Commitment
+include("./Functions/AF_UNIT_COMMITMENT.jl")   # Función auxiliar para ejecutar el Encendido de Generación
 
 #=
 ** Elige el sistema que quieres simular: **
@@ -47,7 +47,7 @@ include("./Functions/AF_UNIT_COMMITMENT.jl")   # Función auxiliar para ejecutar
 sistema  = "2nodos"
 
 #=
-** Elige se quires simular Despacho Economico (DE), Unit Commitment (UC), o Flujo de Potencia Lineal (DCOPF): **
+** Elige se quires simular Despacho Economico (DE), Encendido de Generación (UC), o Flujo de Potencia Lineal (DCOPF): **
 DE
 UC
 DCOPFW
@@ -64,4 +64,5 @@ elseif simulacion == "DCOPF"
     Run_DCOPF(sistema, carpeta_actual)
 
 end
+
 
