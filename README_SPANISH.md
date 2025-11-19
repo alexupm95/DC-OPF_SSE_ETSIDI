@@ -226,7 +226,7 @@ Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para 
      - `ED` → ejecuta un **Despacho Económico**
      - `UC` → ejecuta un **Encendido de Generación**
      - `DCOPF` → ejecuta un **Flujo de Carga Óptimo Linealizado**
-> ℹ️ **Note**: El sistema <code>1nodo</code> solo se puede simular con Despacho Económico y Encendido de Generación. Para ejecutar el DCOPF, el sistema debe tener al menos dos nodos.
+> ℹ️ **Nota**: El sistema <code>1nodo</code> solo se puede simular con Despacho Económico y Encendido de Generación. Para ejecutar el DCOPF, el sistema debe tener al menos dos nodos.
 </details>
 
 ---
