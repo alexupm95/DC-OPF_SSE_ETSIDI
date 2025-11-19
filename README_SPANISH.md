@@ -145,7 +145,7 @@ Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para 
       
   3. **Ejemplo para el sistema `3nodos`:** 
      
-      - Ve a la subcarpeta 📁 [`Input_Data/3nodos`](./Input_Data/3nodsos) y haz doble clic en el archivo [`Input_Data/3nodos/datos_sistema.jl`](./Input_Data/3nodsos/datos_sistema.jl)
+      - Ve a la subcarpeta 📁 [`Input_Data/3nodos`](./Input_Data/3nodos) y haz doble clic en el archivo [`Input_Data/3nodos/datos_sistema.jl`](./Input_Data/3nodos/datos_sistema.jl)
         
       - Las variables con las que puedes experimentar son:
         > ℹ️ **Nota**: **Todas las variables de entrada se guardan en vectores. Para separar dos elementos dentro del vector, usa punto y coma (`;`).**
