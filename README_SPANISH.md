@@ -13,7 +13,7 @@ Este código usa el lenguaje de programación Julia-JuMP y el solver HiGHS para 
     <img src="./utils/Step1.png" alt="Paso 1" width="50%">
   </p>
 
-  1. Copia y pega la URL del repositorio (`https://github.com/alexupm95/DC-OPF_SSE_ETSIDI`) en el campo **GitHub repository name or URL**.  
+  1. Copia y pega la URL del repositorio (`https://github.com/alexupm95/PowerSystemsOptimization_SSE_ETSIDI`) en el campo **GitHub repository name or URL**.  
   2. En el campo **Git ref (branch, tag, or commit)**, escribe `main`.  
   3. Luego haz clic en **launch**.  
   4. Espera a que el servidor instale todos los requisitos y precompile los paquetes.
