@@ -21,9 +21,9 @@ end
 function generadores()
     generador = [1; 2]     
     nodo = [1; 2]
-    minima_potencia = [10; 10]
+    minima_potencia = [0; 0]
     maxima_potencia = [200; 200]
-    coste = [20; 30]
+    coste = [10; 100]
 
     return generador, nodo, minima_potencia, maxima_potencia, coste
 end
@@ -42,7 +42,7 @@ function lineas()
     de_nodo = [1]
     para_nodo = [2]
     susceptancia = [10]
-    maxima_potencia = [200]
+    maxima_potencia = [100]
 
     return linea, de_nodo, para_nodo, susceptancia, maxima_potencia
 end
