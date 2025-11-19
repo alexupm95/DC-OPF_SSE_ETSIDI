@@ -5,7 +5,7 @@
 # potencia_carga -> Potencia demandada por la carga (MW)
 function nodos()
     nodo = [1; 2; 3] 
-    potencia_carga = [0; 60; 60]
+    potencia_carga = [100; 0; 0]
 
     return nodo, potencia_carga
 end
@@ -21,9 +21,9 @@ end
 function generadores()
     generador = [1; 2; 3] 
     nodo = [1; 2; 3]
-    minima_potencia = [10; 10; 10]
-    maxima_potencia = [150; 100; 50]
-    coste = [25; 15; 30]
+    minima_potencia = [0; 0; 0]
+    maxima_potencia = [200; 200; 200]
+    coste = [100; 10; 20]
 
     return generador, nodo, minima_potencia, maxima_potencia, coste
 end
@@ -41,8 +41,9 @@ function lineas()
     linea = [1; 2; 3]
     de_nodo = [1; 1; 2]
     para_nodo = [2; 3; 3]
-    susceptancia = [10; 10; 10]
-    maxima_potencia = [40; 80; 30]
+    susceptancia = [1; 1; 1]
+    maxima_potencia = [10; Inf; Inf]
 
     return linea, de_nodo, para_nodo, susceptancia, maxima_potencia
+
 end
